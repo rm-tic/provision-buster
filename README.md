@@ -18,5 +18,5 @@ Esta receita provisiona uma estação de trabalho recém formatada com Debian 10
 
 **SHELL**
 ```bash
-wget -qO- https://raw.githubusercontent.com/rm-tic/provision-debian/master/provision_buster_init.sh | sudo bash -
+wget -qO- https://raw.githubusercontent.com/rm-tic/provision-buster/master/provision_buster_init.sh | sudo bash -
 ```
