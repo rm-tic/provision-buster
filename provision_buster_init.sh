@@ -7,7 +7,7 @@ function GTERM_LOAD()
    GTERM_DIR="$HOME/.gterm"
    GTERM_FILE="$GTERM_DIR/gterm-profile.dconf"
    GTERM_RC="$GTERM_DIR/gterm.rc"
-   GTERM_URL="https://raw.githubusercontent.com/rm-tic/provision-debian/main/gterm-profile.dconf"
+   GTERM_URL="https://raw.githubusercontent.com/rm-tic/provision-buster/main/gterm-profile.dconf"
 
 
    if [[ ! -d $GTERM_DIR  || "$(cat $GTERM_RC)" != "0" ]]; then
@@ -135,8 +135,8 @@ function INSTALL()
 
 function CLONE_REPO()
 {
-   REPO_DIR="/tmp/provision-debian"
-   REPO_URL="https://github.com/rm-tic/provision-debian.git"
+   REPO_DIR="/tmp/provision-buster"
+   REPO_URL="https://github.com/rm-tic/provision-buster.git"
 
    echo "Cloning Repository in $REPO_DIR"
 
@@ -166,7 +166,7 @@ function EXEC_ANSIBLE()
    echo
    echo "Starting Playbook..."
    echo
-   ansible-playbook -i "$REPO_DIR/hosts" "$REPO_DIR/main.yml"
+   ansible-playbook -i "$REPO_DIR/hosts" "$REPO_DIR/main.yml" -t fonts
 }
 
 function MAIN()
@@ -176,7 +176,7 @@ function MAIN()
    echo "+------------------------------------+"
    echo "| Invencible (Ansible)               |"
    echo "|------------------------------------|"
-   echo "| Project : provision-debian         |"
+   echo "| Project : provision-buster         |"
    echo "| Author  : Rodrigo Martins (IceTux) |"
    echo "| Updated : 2021-02-27               |"
    echo "+------------------------------------+"

@@ -1,6 +1,13 @@
 ---
 - hosts: local
-  become: yes
+  become: true
+
+  pre_tasks:
+    - name: Add User to Sudoers Group
+      user:
+        name: "{{ ansible_env.SUDO_USER }}"
+        groups: sudo
+        append: yes
 
   roles:
     - { role: install, tags: ['role_install'] }

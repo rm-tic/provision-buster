@@ -10,7 +10,6 @@ remove_pkgs:
   - gnome-music
   - gnome-weather
   - libreoffice*
-  - malcontent
   - transmission*
 
 apt_key_urls:
@@ -33,10 +32,7 @@ pkgs:
   - build-essential
   - curl
   - deborphan
-  - docker.io
-  - docker-compose
   - enpass
-  - flameshot
   - flatpak
   - gimp
   - gnome-software-plugin-flatpak
@@ -52,10 +48,8 @@ pkgs:
   - p7zip-rar
   - peek
   - qbittorrent
-  - scrcpy
   - tmux
   - uget
-  - vagrant
   - vim
   - xclip
   - youtube-dl
@@ -67,6 +61,7 @@ flatpak_pkgs:
   - io.github.celluloid_player.Celluloid
   - com.visualstudio.code
   - com.discordapp.Discord
+  - org.flameshot.Flameshot
   - com.wps.Office
   - com.getpostman.Postman
   - com.obsproject.Studio

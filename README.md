@@ -4,9 +4,9 @@
   <img src="img/debian_logo.png">
 </p>
 
-#### Distro suportada: Debian 11
+#### Distro suportada: Debian 10
 
-Esta receita provisiona uma estação de trabalho recém formatada com Debian 11
+Esta receita provisiona uma estação de trabalho recém formatada com Debian 10
 
 - Instala diversos pacotes GUI/CLI
 - Arquivos de configuração customizados
@@ -18,5 +18,5 @@ Esta receita provisiona uma estação de trabalho recém formatada com Debian 11
 
 **SHELL**
 ```bash
-wget -qO- https://raw.githubusercontent.com/rm-tic/provision-debian/master/provision_debian_init.sh | sudo bash -
+wget -qO- https://raw.githubusercontent.com/rm-tic/provision-debian/master/provision_buster_init.sh | sudo bash -
 ```
