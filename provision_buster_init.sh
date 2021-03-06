@@ -37,7 +37,7 @@ function GTERM_LOAD()
          sudo apt-get install -y dconf-cli > /dev/null 2>&1
          echo ">> dconf-cli installed."
 
-      else
+      fi
 
       if [ "$UUID_STATUS" = "absent" ]; then
 
@@ -45,7 +45,7 @@ function GTERM_LOAD()
          sudo apt-get install -y uuid-runtime > /dev/null 2>&1
          echo ">> uuid-runtime installed."
 
-      else
+      fi
 
 
       mkdir $GTERM_DIR
