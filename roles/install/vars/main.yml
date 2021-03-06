@@ -31,6 +31,7 @@ pkgs:
   - autokey-gtk
   - build-essential
   - curl
+  - dconf-cli
   - deborphan
   - enpass
   - flatpak
@@ -50,6 +51,7 @@ pkgs:
   - qbittorrent
   - tmux
   - uget
+  - uuid-runtime
   - vim
   - xclip
   - youtube-dl
