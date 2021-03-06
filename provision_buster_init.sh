@@ -19,50 +19,6 @@ function CHECK_INSTALL()
 
 }
 
-function GTERM_LOAD()
-{
-   GTERM_DIR="$HOME/.gterm"
-   GTERM_FILE="$GTERM_DIR/gterm-profile.dconf"
-   GTERM_RC="$GTERM_DIR/gterm.rc"
-   GTERM_URL="https://raw.githubusercontent.com/rm-tic/provision-buster/main/gterm-profile.dconf"
-   DCONF_STATUS="$(CHECK_INSTALL dconf-cli)"
-   UUID_STATUS="$(CHECK_INSTALL uuid-runtime)"
-
-
-   if [[ ! -d $GTERM_DIR  || "$(cat $GTERM_RC)" != "0" ]]; then
-
-      if [ "$DCONF_STATUS" = "absent" ]; then
-
-         APT_UPDATE
-         sudo apt-get install -y dconf-cli > /dev/null 2>&1
-         echo ">> dconf-cli installed."
-
-      fi
-
-      if [ "$UUID_STATUS" = "absent" ]; then
-
-         APT_UPDATE
-         sudo apt-get install -y uuid-runtime > /dev/null 2>&1
-         echo ">> uuid-runtime installed."
-
-      fi
-
-
-      mkdir $GTERM_DIR
-      echo "0" > $GTERM_RC
-
-      wget -qO $GTERM_FILE $GTERM_URL
-
-      #DCONF EXPORT
-      #dconf dump /org/gnome/terminal/legacy/profiles:/ > $GTERM_FILE
-
-      #DCONF IMPORT
-      dconf load /org/gnome/terminal/legacy/profiles:/ < $GTERM_FILE
-
-   fi
-
-}
-
 function APT_UPDATE()
 {
 
