@@ -159,7 +159,6 @@ function MAIN()
    echo
 
    #Exec Functions
-   GTERM_LOAD
    INSTALL
    CLONE_REPO
    CREATE_VENV
